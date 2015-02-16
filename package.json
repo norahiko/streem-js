@@ -1,0 +1,20 @@
+{
+  "name": "streem-js",
+  "version": "0.0.0",
+  "description": "JavaScript implementation of streem",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "streem"
+  ],
+  "author": "norahiko",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
+}
