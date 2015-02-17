@@ -107,6 +107,6 @@ describe("scan identifier", function() {
 describe("tokenize", function() {
     it("expression 1", function() {
         var tokens = ts(lex("foo(1.0, \n  'str')"));
-        assert.deepEqual(tokens, ["foo", "(", "1.0", ",", "\n", "'str'", ")"]);
+        assert.deepEqual(tokens, ["foo", "(", "1.0", ",", "'str'", ")"]);
     });
 });
