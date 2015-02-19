@@ -1,0 +1,124 @@
+program
+    statements
+
+statements
+    statement? (sep+ statement)* sep*
+
+statement
+    'emit' args?
+    'return' args?
+    'break'
+    expression
+
+sep
+    ';'
+    '\n'
+
+args
+    expression (',' expression)*
+
+expression
+    assign
+
+assign
+    or ('=' assign)?
+
+or
+    and ('||' and)*
+
+and
+    bitor ('&&' bitor)*
+
+bitor
+    bitxor ('|' bitxor)*
+
+bitxor
+    bitand ('^', bitand)*
+
+bitand
+    equal ('&', bitand)*
+
+equal
+    compare (('==' | '!=') compare)*
+
+compare
+    bitshift (('<' | '>' | '<=' | '>=') bitshift)*
+
+bitshift
+    add (('<<' | '>>') add)*
+
+add
+    multi (('+' | '-') multi)*
+
+multi
+    unary (('*' | '/' | '%') unary)*
+
+unary
+    '+' unary
+    '-' unary
+    '!' unary
+    '~' unary
+    primary
+
+primary
+    block
+    'if' condition '{' statements '}' else?
+    literal (prop | call)*
+
+block
+    '{' args? '->' statements '}'
+
+params
+    identifier (',' identifier)*
+
+condition
+    expression <not block>
+
+else
+    elseif* 'else' '{' statements '}'
+
+elseif
+    'else' 'if' expression '{' statements '}'
+
+prop
+    '.' identifier
+
+call
+    '(' args? ')'
+
+literal
+    identifier
+    number
+    string
+    array
+    paren
+    'true'
+    'false'
+    'null'
+
+array
+    '[' args? ']'
+
+paren
+    '(' expression ')'
+
+identifier
+    [A-Za-z_][0-9A-Za-z]* <not keyword>
+
+number
+    [1-9][0-9]* ('.' [0-9]*)?
+    '0' ('.' [0-9]*)?
+
+string
+    '"' [^"]* '"'
+
+keyword
+    'if'
+    'else'
+    'true'
+    'false'
+    'null'
+    'emit'
+    'return'
+    'break'
+    'do'

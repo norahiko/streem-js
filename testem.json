@@ -7,7 +7,7 @@
 
     "launchers": {
         "Mocha": {
-            "command": "mocha"
+            "command": "mocha -R min"
         }
     },
     "launch_in_dev": [
