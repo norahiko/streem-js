@@ -8,6 +8,7 @@ statement
     'emit' args?
     'return' args?
     'break'
+    'skip'
     expression
 
 sep
@@ -121,4 +122,5 @@ keyword
     'emit'
     'return'
     'break'
+    'skip'
     'do'
