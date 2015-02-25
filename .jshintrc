@@ -1,0 +1,30 @@
+{
+    "globals": {
+        "describe": false,
+        "it": false,
+        "xit": false,
+        "xdescribe": false,
+        "beforeEach": false,
+        "afterEach": false,
+        "before": false,
+        "after": false,
+        "mocha": false,
+        "chai": false
+    },
+
+    "browser": true,
+    "devel": true,
+    "node": true,
+    "expr": true,
+    "eqeqeq": true,
+    "newcap": false,
+    "quotmark": true,
+    "undef": true,
+    "unused": "vars",
+    "trailing": true,
+    "supernew": true,
+    "lastsemic": true,
+    "evil": true,
+    "funcscope": true
+}
+// vim: set filetype=javascript:
