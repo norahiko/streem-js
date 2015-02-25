@@ -6,7 +6,7 @@ statements
 
 statement
     'emit' args?
-    'return' args?
+    'return' expression?
     'skip'
     expression
 
