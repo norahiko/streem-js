@@ -9,6 +9,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "bin": {
+      "streem-js": "./lib/index.js"
+  },
   "keywords": [
     "streem"
   ],
