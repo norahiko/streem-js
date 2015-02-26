@@ -1,0 +1,17 @@
+filter = { condition ->
+    { n -> if !condition(n) { skip }; n }
+}
+
+b = { x -> x > 2 }
+seq(20) | filter({x -> 5 < x}) | filter({x -> x < 15}) | STDOUT
+
+# output
+# 6
+# 7
+# 8
+# 9
+# 10
+# 11
+# 12
+# 13
+# 14

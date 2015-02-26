@@ -1,0 +1,4 @@
+#!/usr/bin/env streem-js
+# cat program
+
+STDIN | STDOUT
