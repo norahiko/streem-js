@@ -1,0 +1,9 @@
+[{
+    str = "foo";
+    {
+        str = "bar"
+    }()
+}()] | STDOUT
+
+# output
+# bar
