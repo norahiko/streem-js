@@ -14,7 +14,9 @@ function runTest(src, expected, done) {
 
 function compileTest(src, expected, done) {
     var cmd = "node lib/index.js -c " + src + " | node";
+
     child_process.exec(cmd, function(err, out) {
+        console.log(src, err);
         assert(err === null);
         assert.equal(out, expected);
         done();
