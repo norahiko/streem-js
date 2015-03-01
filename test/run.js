@@ -16,7 +16,6 @@ function compileTest(src, expected, done) {
     var cmd = "node lib/index.js -c " + src + " | node";
 
     child_process.exec(cmd, function(err, out) {
-        console.log(src, err);
         assert(err === null);
         assert.equal(out, expected);
         done();
@@ -43,10 +42,12 @@ describe("Run examples", function() {
     });
 
     it("write-file.strm", function(done) {
-        runTest("examples/write-file.strm", "", done);
-        var out = fs.readFileSync("test/out.txt").toString();
-        var expected = "-\n--\n---\n----\n-----\n------\n-------\n--------\n---------\n----------\n";
-        assert.equal(out, expected);
+        runTest("examples/write-file.strm", "", function() {
+            var out = fs.readFileSync("test/out.txt").toString();
+            var expected = "-\n--\n---\n----\n-----\n------\n-------\n--------\n---------\n----------\n";
+            assert.equal(out, expected);
+            done();
+        });
     });
 
     it("if.strm", function(done) {
