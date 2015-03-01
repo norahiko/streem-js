@@ -4,13 +4,14 @@
   "description": "JavaScript implementation of streem",
   "main": "lib/index.js",
   "directories": {
+    "example": "examples",
     "test": "test"
   },
   "scripts": {
     "test": "mocha"
   },
   "bin": {
-      "streem-js": "./lib/index.js"
+    "streem-js": "./lib/index.js"
   },
   "keywords": [
     "streem"
@@ -18,7 +19,17 @@
   "author": "norahiko",
   "license": "MIT",
   "devDependencies": {
-    "minimist": "^1.1.0",
     "mocha": "^2.1.0"
-  }
+  },
+  "dependencies": {
+    "minimist": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/norahiko/streem-js"
+  },
+  "bugs": {
+    "url": "https://github.com/norahiko/streem-js/issues"
+  },
+  "homepage": "https://github.com/norahiko/streem-js"
 }
