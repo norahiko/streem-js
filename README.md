@@ -20,7 +20,7 @@ JavaScript implementation of [Streem][]
 ## Installation
 
 ```sh
-$ npm install streem-js
+$ npm install streem-js -g
 ```
 
 [Streem]:https://github.com/matz/streem
