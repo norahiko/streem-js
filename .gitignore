@@ -1,3 +1,5 @@
 node_modules
 *.log
 sandbox
+test/*.txt
+*/streem-runtime.js

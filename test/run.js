@@ -1,5 +1,6 @@
 //var vm = require("../lib/vm");
 var assert = require("assert");
+var fs = require("fs");
 var child_process = require("child_process");
 
 function runtest(src, expected, done) {
@@ -34,6 +35,26 @@ describe("Run examples", function() {
 
     it("block.strm", function(done) {
         runtest("examples/block.strm", "bar\n", done);
+    });
+
+    it("emit.strm", function(done) {
+        runtest("examples/emit.strm", "1\n-1\n2\n-2\n3\n-3\n4\n-4\n5\n-5\n", done);
+    });
+
+    it("write-file.strm", function(done) {
+        runtest("examples/write-file.strm", "", done);
+        var out = fs.readFileSync("test/out.txt").toString();
+        var expected = "-\n--\n---\n----\n-----\n------\n-------\n--------\n---------\n----------\n";
+        assert.equal(out, expected);
+    });
+
+    it("if.strm", function(done) {
+        runtest("examples/if.strm", "true\n", done);
+    });
+
+    it("read-file.strm", function(done) {
+        var expected = fs.readFileSync("README.md").toString().toUpperCase();
+        runtest("examples/read-file.strm", expected, done);
     });
 
     it("fizzbuzz.strm", function(done) {

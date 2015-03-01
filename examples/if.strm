@@ -1,0 +1,7 @@
+# ruby style condition
+# toBoolean(0) == true
+
+[if 0 { true } else { false }] | STDOUT
+
+# output
+# true

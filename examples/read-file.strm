@@ -1,0 +1,5 @@
+upper = { buf ->
+    buf.toString().toUpperCase()
+}
+
+file("README.md") | upper | STDOUT
