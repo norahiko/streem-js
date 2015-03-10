@@ -1,3 +1,5 @@
+#!/usr/bin/env streem-js
+
 b = {
     emit 1
     return 2

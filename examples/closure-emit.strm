@@ -1,5 +1,10 @@
+#!/usr/bin/env streem-js
+
 seq(1) | {
     timeout(100, {
         emit "hello"
     })
 } | STDOUT
+
+# output
+# hello

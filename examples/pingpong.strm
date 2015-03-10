@@ -21,3 +21,15 @@ pong = { x ->
 }
 
 seq(5) | ping | delay(500) | pong | delay(500) | FLUSH
+
+# output
+# ping: 1
+# pong: 1
+# ping: 2
+# pong: 2
+# ping: 3
+# pong: 3
+# ping: 4
+# pong: 4
+# ping: 5
+# pong: 5

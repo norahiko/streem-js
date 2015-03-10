@@ -1,3 +1,4 @@
+#!/usr/bin/env streem-js
 # seq(100) returns a stream of numbers from 1 to 100.
 # A function object in pipeline works as a map function.
 # STDOUT is an output destination.

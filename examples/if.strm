@@ -1,3 +1,4 @@
+#!/usr/bin/env streem-js
 # ruby style condition
 # toBoolean(0) == true
 

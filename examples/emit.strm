@@ -1,1 +1,15 @@
+#!/usr/bin/env streem-js
+
 seq(5) | { n -> i = -n; emit n, i } | STDOUT
+
+# output
+# 1
+# -1
+# 2
+# -2
+# 3
+# -3
+# 4
+# -4
+# 5
+# -5

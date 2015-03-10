@@ -1,3 +1,5 @@
+#!/usr/bin/env streem-js
+
 filter = { condition ->
     { n -> if !condition(n) { skip }; n }
 }

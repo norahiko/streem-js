@@ -1,3 +1,5 @@
+#!/usr/bin/env streem-js
+
 seq(10) | {x -> "-" * x} | file("test/out.txt")
 
 # output to test/out.txt

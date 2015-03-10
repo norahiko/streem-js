@@ -1,3 +1,5 @@
+#!/usr/bin/env streem-js
+
 upper = { buf ->
     buf.toString().toUpperCase()
 }
