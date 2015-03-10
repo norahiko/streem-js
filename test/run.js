@@ -33,6 +33,10 @@ describe("Run examples", function() {
         runTest("examples/skip.strm", "1\n3\n5\n7\n9\n11\n13\n15\n17\n19\n", done);
     });
 
+    it("return.strm", function(done) {
+        runTest("examples/return.strm", "2\n1\n2\n", done);
+    });
+
     it("block.strm", function(done) {
         runTest("examples/block.strm", "bar\n", done);
     });

@@ -1,0 +1,13 @@
+b = {
+    emit 1
+    return 2
+}
+
+println(b())
+
+[null] | b | STDOUT
+
+# output
+# 2
+# 1
+# 2
