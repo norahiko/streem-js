@@ -5,9 +5,9 @@ var child_process = require("child_process");
 
 function runTest(src, expected, done) {
     var cmd = "node lib/index.js " + src;
-    child_process.exec(cmd, function(err, out) {
-        assert(err === null);
-        assert.equal(out, expected);
+    child_process.exec(cmd, function(err, stdout, stderr) {
+        assert(err === null, stderr);
+        assert.equal(stdout, expected);
         compileTest(src, expected, done);
     });
 }
@@ -15,9 +15,9 @@ function runTest(src, expected, done) {
 function compileTest(src, expected, done) {
     var cmd = "node lib/index.js -c " + src + " | node";
 
-    child_process.exec(cmd, function(err, out) {
-        assert(err === null);
-        assert.equal(out, expected);
+    child_process.exec(cmd, function(err, stdout, stderr) {
+        assert(err === null, stderr);
+        assert.equal(stdout, expected);
         done();
     });
 }
