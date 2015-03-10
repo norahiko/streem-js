@@ -3,6 +3,7 @@
     {
         str = "bar"
     }()
+    str
 }()] | STDOUT
 
 # output
