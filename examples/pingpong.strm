@@ -1,26 +1,17 @@
 #!/usr/bin/env streem-js
 
-delay = { ms ->
-    { val ->
-        timeout(ms, {
-            emit val
-        })
-    }
-}
 
 ping = { x ->
-    print("ping: ")
-    println(x)
+    println("ping: ", x)
     x
 }
 
 pong = { x ->
-    print("pong: ")
-    println(x)
+    println("pong: ", x)
     x
 }
 
-seq(5) | ping | delay(500) | pong | delay(500) | FLUSH
+seq(5) | ping | wait(500) | pong | wait(500) | FLUSH
 
 # output
 # ping: 1
